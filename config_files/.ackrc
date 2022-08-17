@@ -1,0 +1,4 @@
+--type-set=markdown:ext:md,mkd,markdown
+--type-add=rr:ext:Rmd
+--sort-files
+--color

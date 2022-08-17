@@ -1,5 +1,4 @@
 # R
-brew install r
 brew install --cask rstudio
 
 # Tech
