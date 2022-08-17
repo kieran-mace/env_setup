@@ -1,0 +1,1 @@
+sudo ~/.local/bin/kmonad ~/env_setup/keybord_layout/kieran.kbd
