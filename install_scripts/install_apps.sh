@@ -7,7 +7,12 @@ brew install --cask visual-studio-code
 brew install --cask fork
 
 brew install --cask bettertouchtool
-brew install --cask alfred
+#brew install --cask alfred
+brew install --cask raycast
+brew install --cask maccy
+
+
+
 
 brew install --cask 1password
 brew install --cask google-chrome
