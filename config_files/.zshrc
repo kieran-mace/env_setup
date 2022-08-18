@@ -15,6 +15,7 @@ fi
 
 # ssh
 export SSH_KEY_PATH="~/.ssh/rsa_id"
+export EDITOR="code -w"
 
 # Dracula Theme (for zsh-syntax-highlighting)
 #
