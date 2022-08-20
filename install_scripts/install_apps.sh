@@ -15,6 +15,7 @@ brew install --cask maccy
 
 
 brew install --cask 1password
+brew install --cask 1password/tap/1password-cli
 brew install --cask google-chrome
 brew install --cask notion
 brew install --cask zoom
