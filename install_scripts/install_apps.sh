@@ -6,8 +6,10 @@ brew install --cask rstudio
 brew install --cask warp
 brew install --cask visual-studio-code
 brew install --cask fork
+brew install --cask dbeaver-community
 
-brew install --cask bettertouchtool
+
+#brew install --cask bettertouchtool
 #brew install --cask alfred
 brew install --cask raycast
 brew install --cask maccy
@@ -21,3 +23,6 @@ brew install --cask google-chrome
 brew install --cask notion
 brew install --cask zoom
 brew install --cask slack
+
+# install moom
+# install harvest
