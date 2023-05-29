@@ -22,6 +22,8 @@
 ;; can use `fn' as a modifier (like Emacs).
 
 (defalias fn (around (layer-toggle function) fn))
+(defalias spcsym (tap-hold 401 spc (layer-toggle symbol)))
+(defalias enumpad (tap-hold 401 e (layer-toggle numpad)))
 
 ;; -- Home row mods --
 (defalias hshift (tap-hold 401 h lsft))      ;; Shift on H
@@ -38,11 +40,29 @@
 
 (deflayer default
   _       brdn brup lp   mctl bldn blup prev pp   next mute vold volu
-  _       _         _         _         _         _         _         _         _         _         _         _         _         _  
+  _       #         `         ~         -         \         |         !         @         *         _         _         _         _  
   _       x         c         d         f         b         q         l         u         '         :         _         _         _  
-  _       @rrctl         @salt         @tcmd      @hshift    k         j         @nshift    @acmd      @oalt         @ictl         _         _  
+  _       @rrctl    @salt     @tcmd     @hshift   k         j         @nshift   @acmd     @oalt     @ictl     _         _  
   _       w         g         m         p         v         z         ,         .         /         y         _         _  
-  @fn     _         \_        spc                               bspc                        e       =         _         _         _  
+  @fn     _        \_         @spcsym                 bspc                      @enumpad       =         _         _         _  
+)
+
+(deflayer symbol
+  _       brdn brup lp   mctl bldn blup prev pp   next mute vold volu
+  _       #         `         ~         -         \         |         !         @         *         _         _         _         _  
+  _       x         c         d         f         b         `         #         {         }         !         _         _         _  
+  _       @rrctl    @salt     @tcmd     @hshift   k         ~         $        \(        \)         &         _         _
+  _       w         g         m         p         v         -         %         [         ]         |         _         _
+  @fn     _         \_        spc                               bspc                      e       =         _         _         _  
+)
+
+(deflayer numpad
+  _       brdn brup lp   mctl bldn blup prev pp   next mute vold volu
+  _       #         `         ~         -         \         |         !         @         *         _         _         _         _  
+  _       x         7         8         9         b         q         l         u         '         :         _         _         _  
+  _       @rrctl    4         5         6         k         j         @nshift   @acmd     @oalt     @ictl     _         _  
+  _       w         1         2         3         v         z         ,         .         /         y         _         _  
+  @fn     _        \_         0                 bspc                        e       =         _         _         _  
 )
 
 (deflayer function
