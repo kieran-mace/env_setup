@@ -23,7 +23,8 @@
 
 (defalias fn (around (layer-toggle function) fn))
 (defalias spcsym (tap-hold 401 spc (layer-toggle symbol)))
-(defalias enumpad (tap-hold 401 e (layer-toggle numpad)))
+(defalias earrow (tap-hold 401 e (layer-toggle arrow)))
+(defalias equalnumpad (tap-hold 401 = (layer-toggle numpad)))
 
 ;; -- Home row mods --
 (defalias hshift (tap-hold 401 h lsft))      ;; Shift on H
@@ -42,28 +43,38 @@
   _       brdn brup lp   mctl bldn blup prev pp   next mute vold volu
   _       #         `         ~         -         \         |         !         @         *         _         _         _         _  
   _       x         c         d         f         b         q         l         u         '         :         _         _         _  
-  _       @rrctl    @salt     @tcmd     @hshift   k         j         @nshift   @acmd     @oalt     @ictl     _         _  
-  _       w         g         m         p         v         z         ,         .         /         y         _         _  
-  @fn     _        \_         @spcsym                 bspc                      @enumpad       =         _         _         _  
+  del     @rrctl    @salt     @tcmd     @hshift   k         j         @nshift   @acmd     @oalt     @ictl     tab       _  
+  M-spc   w         g         m         p         v         z         ,         .         /         y         S-M-spc   _  
+  @fn     _        \_         @spcsym                 bspc                      @earrow       @equalnumpad         _         _         _  
 )
 
 (deflayer symbol
-  _       brdn brup lp   mctl bldn blup prev pp   next mute vold volu
-  _       #         `         ~         -         \         |         !         @         *         _         _         _         _  
-  _       x         c         d         f         b         `         #         {         }         !         _         _         _  
-  _       @rrctl    @salt     @tcmd     @hshift   k         ~         $        \(        \)         &         _         _
-  _       w         g         m         p         v         -         %         [         ]         |         _         _
-  @fn     _         \_        spc                               bspc                      e       =         _         _         _  
+  _       _ _ _   _ _ _ _ _   _ _ _ _
+  _       _         _         _         _         \         _         _         _         _         _         _         _         _  
+  _       _         _         _         _         _         `         #         {         }         !         _         _         _  
+  _       @rrctl    @salt     @tcmd     @hshift   _         ~         $        \(        \)         &         _         _
+  _       _         _         _         _         _         -         %         [         ]         |         _         _
+  @fn     _         _        _                               _                      _       _         _         _         _  
+)
+
+(deflayer arrow
+  _       _ _ _   _ _ _ _ _   _ _ _ _
+  _       _         _         _         _         \         _         _         _         _         _         _         _         _  
+  _       _         _         up         _         _         _         _         _         _         _         _         _         _  
+  _       _    left         down         right         _         _         @nshift   @acmd     @oalt     @ictl     _         _  
+  _       _         _         _         _         _         _         _         _         _         _         _         _  
+  _     _        _         _                 _                        _       _         _         _         _  
 )
 
 (deflayer numpad
-  _       brdn brup lp   mctl bldn blup prev pp   next mute vold volu
-  _       #         `         ~         -         \         |         !         @         *         _         _         _         _  
-  _       x         7         8         9         b         q         l         u         '         :         _         _         _  
-  _       @rrctl    4         5         6         k         j         @nshift   @acmd     @oalt     @ictl     _         _  
-  _       w         1         2         3         v         z         ,         .         /         y         _         _  
-  @fn     _        \_         0                 bspc                        e       =         _         _         _  
+  _       _ _ _   _ _ _ _ _   _ _ _ _
+  _       _         _         _         _         \         _         _         _         _         _         _         _         _  
+  _       _         7         8         9         _         _         _         _         _         _         _         _         _  
+  _       _         4         5         6         _         _         @nshift   @acmd     @oalt     @ictl     _         _  
+  _       _         1         2         3         _         _         _         _         _         _         _         _  
+  @fn     _        _         0                 .                        _       _         _         _         _  
 )
+
 
 (deflayer function
   _    f1   f2   f3   f4   f5   f6   f7   f8   f9   f10  f11  f12
